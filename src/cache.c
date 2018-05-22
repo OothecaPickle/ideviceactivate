@@ -138,7 +138,7 @@ int check_cache(lockdownd_client_t lockdownd) {
 	char* uuid_from_cache = NULL;
 
 	uuid_from_cache = get_from_cache("UUID");
-	lockdownd_error_t error = lockdownd_get_device_uuid(lockdownd, &uuid_from_device);
+	lockdownd_error_t error = lockdownd_get_device_udid(lockdownd, &uuid_from_device);
 	if(error != LOCKDOWN_E_SUCCESS) {
 		return -1;
 	}
